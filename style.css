@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*              Utility Components           */
+
+:root {
+  font-size: 62.5%;
+
+  /*  Custom Properties    */
+
+  /*  Main Color */
+  --primary-color: #264653;
+
+  /*  Secondary Color */
+  --secondary-color: #e9c46a;
+
+  /*  Secondary Color Modified */
+  --secondary-color-m: #f4a261;
+
+  /*  Tertiary Color */
+  --tertiary-color: #2a9d8f;
+
+  /*  Tertiary Color Modified */
+  --tertiary-color-m: #2a9d9081;
+}
+
+body {
+  /* font-family: ;
+  line-height: ; */
+  display: flex;
+}
+
+/*                       Miain Styling */
+
+/*                              SIde Nav                     */
+aside#side-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+div.side-nav__content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: var(--secondary-color);
+}
+
+div#side-nav__content--logo {
+  width: calc(3vw + 3vh);
+}
+
+ul.side-nav__content--social {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul.side-nav__content--social a i {
+  /* 20px => 2rem => {1rem + [(10/1500) * 100]} => Dynamic Value */
+  font-size: calc(1rem + 0.6667vw);
+  color: white;
+
+  padding-bottom: calc(2rem + 0.6667vw);
+
+  transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+ul.side-nav__content--social a i:hover,
+ul.side-nav__content--social a i:active {
+  color: var(--secondary-color);
+}
