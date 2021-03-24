@@ -82,6 +82,7 @@ ul.side-nav__content--social a i:active {
   color: var(--secondary-color);
 }
 
+/* Main Nav */
 /* List Items */
 li {
   list-style: none;
@@ -168,4 +169,208 @@ ul.header__main-nav--links li a:active::before,
 ul.header__main-nav--links li a:hover::after,
 ul.header__main-nav--links li a:active::after {
   transform: scaleX(1);
+}
+
+/*          Hero Section  */
+/*            Showcase / Hero Section */
+section#showcase {
+  height: 100vh;
+  background-image: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.showcase__content {
+  background-color: var(--primary-color);
+  padding: calc(1rem + 2vw);
+  height: calc(5rem + 20vmax);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  animation: hero 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes hero {
+  0% {
+    transform: translateX(100rem) rotate(360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* .showcase__content {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+} */
+
+.showcase__content--title {
+  font-size: calc(2rem + 2vw);
+  color: white;
+}
+
+.showcase__content--para {
+  font-family: 'Indie Flower', cursive;
+  font-size: calc(1rem + 1vw);
+  color: white;
+}
+
+.showcase__content--link:link,
+.showcase__content--link:visited {
+  padding: 1rem 0;
+  transition: all 0.5s ease-in-out;
+  width: 9rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.showcase__content--link:link::after,
+.showcase__content--link:visited::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  z-index: -1;
+}
+
+.showcase__content--link:hover::after,
+.showcase__content--link:active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*      Media Queries     */
+
+@media screen and (max-width: 900px) {
+  /* Showcase / Hero Section  */
+  section#showcase {
+    background-position: 100%;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  /*              Main      NAV  Header        */
+  header#header {
+    position: absolute;
+  }
+
+  nav#header__main-nav {
+    width: 30rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+  }
+
+  .clicked {
+    left: 55%;
+  }
+
+  .header__main-nav--hamburger {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: white;
+    border-radius: 0.2rem;
+    transition: all 0.4s ease-in-out;
+  }
+
+  ul.header__main-nav--links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  ul.header__main-nav--links li {
+    margin-bottom: 4vh;
+    margin-left: 6vw;
+  }
+
+  .clicked .line-1 {
+    transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+  }
+
+  .clicked .line-2 {
+    opacity: 0;
+  }
+
+  .clicked .line-3 {
+    transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+  }
+
+  ul.header__main-nav--links li {
+    opacity: 0;
+  }
+
+  ul.header__main-nav--links li:nth-child(1) {
+    transition: all 0.5s ease-in-out 0.2s;
+  }
+  ul.header__main-nav--links li:nth-child(2) {
+    transition: all 0.5s ease-in-out 0.4s;
+  }
+  ul.header__main-nav--links li:nth-child(3) {
+    transition: all 0.5s ease-in-out 0.6s;
+  }
+  ul.header__main-nav--links li:nth-child(4) {
+    transition: all 0.5s ease-in-out 0.8s;
+  }
+  ul.header__main-nav--links li:nth-child(5) {
+    transition: all 0.5s ease-in-out 1s;
+  }
+  ul.header__main-nav--links li:nth-child(6) {
+    transition: all 0.5s ease-in-out 1.2s;
+  }
+
+  ul.header__main-nav--links li.fade {
+    opacity: 1;
+  }
+
+  section#showcase {
+    background-position: 80%;
+  }
 }
