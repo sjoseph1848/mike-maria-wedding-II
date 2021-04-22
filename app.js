@@ -9,6 +9,17 @@ var weddingAnimation = bodymovin.loadAnimation({
 
 weddingAnimation.play();
 
+let hotelAnimation = bodymovin.loadAnimation({
+    container: document.getElementById('about-me__img'),
+    path: 'travel.json',
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Travel To Wedding", // Name for future reference. Optional.
+})
+
+hotelAnimation.play();
+
 console.log('Have it');
 
 const hamburgerContainer = document.querySelector('#header__main-nav');
