@@ -1,4 +1,25 @@
-var weddingAnimation = bodymovin.loadAnimation({
+const navLinks = document.querySelectorAll(".side-nav__content--social a");
+const headLinks = document.querySelectorAll(".header__main-nav--links li a");
+for (const link of navLinks) {
+    link.addEventListener("click", clickHandler);
+}
+
+for (const head of headLinks) {
+    head.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop;
+
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    });
+}
+
+let weddingAnimation = bodymovin.loadAnimation({
     container: document.getElementById('side-nav__content--logo'), // Required
     path: 'wedding.json', // Required
     renderer: 'svg', // Required
@@ -7,10 +28,8 @@ var weddingAnimation = bodymovin.loadAnimation({
     name: "Wedding Rings", // Name for future reference. Optional.
 })
 
-weddingAnimation.play();
-
 let hotelAnimation = bodymovin.loadAnimation({
-    container: document.getElementById('about-me__img'),
+    container: document.getElementById('info__img'),
     path: 'travel.json',
     renderer: 'svg', // Required
     loop: true, // Optional
@@ -18,9 +37,29 @@ let hotelAnimation = bodymovin.loadAnimation({
     name: "Travel To Wedding", // Name for future reference. Optional.
 })
 
-hotelAnimation.play();
+let giftAnimation = bodymovin.loadAnimation({
+    container: document.getElementById('info__img--gift'),
+    path: 'gift.json',
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Gifts Please", // Name for future reference. Optional.
+})
 
-console.log('Have it');
+
+let rsvpAnimation = bodymovin.loadAnimation({
+    container: document.getElementById('info__img--rsvp'),
+    path: 'rsvp.json',
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Gifts Please", // Name for future reference. Optional.
+})
+
+
+
+
+
 
 const hamburgerContainer = document.querySelector('#header__main-nav');
 const hamburger = document.querySelector('.header__main-nav--hamburger');
@@ -32,3 +71,4 @@ hamburger.addEventListener('click', () => {
         link.classList.toggle('fade')
     })
 })
+
