@@ -79,7 +79,7 @@ ul.side-nav__content--social a i {
 
 ul.side-nav__content--social a i:hover,
 ul.side-nav__content--social a i:active {
-  color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 /* Main Nav */
