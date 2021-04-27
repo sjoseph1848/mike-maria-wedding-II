@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /*              Utility Components           */
 
 :root {
@@ -179,8 +175,8 @@ ul.header__main-nav--links li a:active::after {
 /*            Showcase / Hero Section */
 section#showcase {
   height: 100vh;
-  /* background-image: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg'); */
-  background-image: url('./hero.jpg');
+  background-image: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg');
+  /* background-image: url('./hero.jpg'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -541,5 +537,7 @@ section#info.gift {
 
   section#showcase {
     background-position: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
