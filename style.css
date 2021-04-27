@@ -230,6 +230,7 @@ div.showcase__content {
 .showcase__content--para {
   font-size: calc(1rem + 1vw);
   color: white;
+  font-family: 'Baloo Tamma 2', cursive;
 }
 
 .showcase__content--link {
