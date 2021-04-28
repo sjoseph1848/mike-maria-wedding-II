@@ -437,6 +437,7 @@ section#info.gift {
 @media screen and (max-width: 900px) {
   /* Showcase / Hero Section  */
   section#showcase {
+    height: 85vh;
     background-position: 100%;
     align-items: flex-end;
   }
@@ -537,8 +538,7 @@ section#info.gift {
   }
 
   section#showcase {
-    height: 75vh;
+    background-size: 1500px 100vh;
     background-position: 80%;
-    background-size: contain;
   }
 }
