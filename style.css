@@ -175,8 +175,8 @@ ul.header__main-nav--links li a:active::after {
 /*            Showcase / Hero Section */
 section#showcase {
   height: 100vh;
-  background: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg');
-  /* background-image: url('./hero.jpg'); */
+  /* background: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg'); */
+  background-image: url('./hero-1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
