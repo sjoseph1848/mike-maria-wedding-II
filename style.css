@@ -180,10 +180,10 @@ ul.header__main-nav--links li a:active::after {
 section#showcase {
   height: 100vh;
   /* background: url('https://dl1o3dt9eiac3.cloudfront.net/maria_mike-32.jpg'); */
-  background-image: url('./hero-2.jpg');
+  background: url('./hero-2.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 
   display: flex;
   justify-content: flex-start;
